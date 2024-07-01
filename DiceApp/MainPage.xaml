@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceApp.MainPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start">
+
+            <Image
+                x:Name="imgMain"
+                Source="flip.gif"
+                HeightRequest="150"
+                HorizontalOptions="Center"/>
+
+
+            <Label
+                Text="Coins and Dice"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+
+            <HorizontalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <Label
+                Text="Flip adv:"
+                FontSize="15"
+                VerticalOptions="Center" 
+                    HorizontalOptions="End"/>
+
+                <CheckBox
+                x:Name="chkFlipAdv"
+                IsChecked="False"
+                    HorizontalOptions="Start"
+                />
+
+            </HorizontalStackLayout>
+
+
+            <Label
+                    x:Name="lblFlip"
+                Text="Flip Result"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <Button
+                x:Name="btnCoin"
+                Text="Flip Coin"
+                SemanticProperties.Hint="Flips a single coin"
+                Clicked="btnCoin_Clicked"
+                HorizontalOptions="Center" />
+
+                <Button
+                x:Name="btnCoinTillLose"
+                Text="Flip Coin until loss"
+                Clicked="btnCoinTillLose_Clicked"
+                HorizontalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+
+
+
+            <HorizontalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <Label
+                Text="Roll adv:"
+                FontSize="15"
+                VerticalOptions="Center" 
+                    HorizontalOptions="End"/>
+
+                <CheckBox
+                x:Name="chkRollAdv"
+                IsChecked="False"
+                    HorizontalOptions="Start"
+                />
+
+            </HorizontalStackLayout>
+
+            <Label
+                    x:Name="lblRoll"
+                Text="Roll Result"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <Button
+                x:Name="btnDice"
+                Text="roll dice"
+                SemanticProperties.Hint="rolls a single die"
+                Clicked="btnDice_Clicked"
+                HorizontalOptions="Center" />
+
+                <Button
+                x:Name="btnDiceTillLose"
+                Text="roll dice until loss"
+                Clicked="btnDiceTillLose_Clicked"
+                HorizontalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
